@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from 'prop-types'
 import Like from "./common/like";
 
 const MoviesTable = (props) => {
@@ -42,5 +43,11 @@ const MoviesTable = (props) => {
       </table>
      );
 }
+
+MoviesTable.propTypes = {
+    movies: PropTypes.array.isRequired,
+    onLike: PropTypes.func.isRequired,
+    onDelete: PropTypes.func.isRequired
+} 
  
 export default MoviesTable;
